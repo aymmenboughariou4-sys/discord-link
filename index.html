@@ -155,6 +155,68 @@
     outline-offset: 3px;
   }
 
+  .owner-card {
+    margin-top: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #232428;
+    border: 1px solid #34363b;
+    border-radius: 12px;
+    padding: 0.55rem 1rem 0.55rem 0.55rem;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .owner-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+  }
+
+  .owner-avatar-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .owner-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .owner-status {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #23a55a;
+    border: 3px solid #232428;
+  }
+
+  .owner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.25;
+  }
+
+  .owner-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .owner-role {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+
   .scroll-hint {
     position: absolute;
     bottom: 2rem;
@@ -308,6 +370,16 @@
     <h1 class="server-name">LazY︱Wallpapers・Icons・Gifs・Banners・EN</h1>
     <p class="tagline">A Discord community for wallpapers, icons, gifs and banners. Come grab what you like and share what you make.</p>
     <a class="join-btn" href="https://discord.gg/PbRxFFSqCM" target="_blank" rel="noopener">Join the server</a>
+    <div class="owner-card">
+      <span class="owner-avatar-wrap">
+        <img src="preview.jpg" alt="LazY avatar" class="owner-avatar">
+        <span class="owner-status"></span>
+      </span>
+      <span class="owner-info">
+        <span class="owner-name">LazYtechno</span>
+        <span class="owner-role">👑 Server Owner</span>
+      </span>
+    </div>
     <span class="scroll-hint">scroll for a preview</span>
   </section>
 
@@ -325,7 +397,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 LazYtechno</p>
+    <p>&copy; 2026 LazYtechno — server owner</p>
     <div class="legal-links">
       <a href="privacy.html">Privacy policy</a>
       <a href="terms.html">Terms and conditions</a>
